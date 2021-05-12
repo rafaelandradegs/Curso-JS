@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    Velocidade do carro: <input type="number" name="txtvel" id="txtvel">km/h
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="resvelocidade">
+        Resultado da sua Velocidade
+    </div>
+    
+    <script>           
+
+        /*function calcular() {
+            var vel = document.querySelector('input#txtvel').value
+            var mutado = document.querySelector('div#resvelocidade') 
+            if(vel > 60) {
+                mutado.innerHTML = `Sua velocidade atual e ${Number(vel)} voce esta mutado`
+            }else {
+                mutado.innerHTML = `Sua velocidade atual e ${Number(vel)} continue dirigindo com seguranca`
+            }            
+        }   Este e um jeito diferente de fazer achei interessante, porem a baixo vou fazer do jeito do professor guanabara.*/
+        
+        function calcular() {
+            var txtv = window.document.querySelector('input#txtvel')
+            var res = window.document.querySelector('div#resvelocidade')
+            var vel = Number(txtv.value)
+            res.innerHTML = `Sua velocidade atual e de <strong>${vel}km/h</strong>`
+            if (vel > 60) {
+                res.innerHTML += `<p>Voce esta MULTADO por excesso de velocidade.<p>`
+            } 
+                res.innerHTML += `<p>Dirija sempre com seguranca.<p>`            
+        }
+        
+    </script>
+</body>
+</html>

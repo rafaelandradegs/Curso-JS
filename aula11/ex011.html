@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin-left: 50px;
+            padding: auto;
+            background: rgb(156, 110, 194);
+        }
+        div#res {
+            margin-top: 20px;
+            color: crimson;
+            font-size: x-large;
+
+        }
+    </style>
+    <title>Controle de Estrangeiros</title>
+</head>
+<body>
+    <div>
+        <h1>Controle de estrangeiros</h1>
+        <p>Por favor digite em qual PAIS voce nasceu</p> 
+        <input type="text" name="pais" id="pais" >
+        <input type="button" value="Pesquisar" id="pesquisar">
+    </div>
+    
+    <div id="res">
+        Preste atencao aqui pois aparecera seu Resultado
+    </div>
+
+    <script>
+        var acao = document.querySelector('input#pesquisar')
+        acao.addEventListener('click', clicar)
+        function clicar() {
+            var pais = document.querySelector('input#pais')
+            var res = document.querySelector('div#res')
+            if(pais.value != 'Brasil') {
+                res.innerHTML = `Seu pais de nascimento e <strong>${pais.value}</strong> bem vindo ao Brasil`
+            } else {
+                res.innerHTML = `Meus pesames voce e Brasileiro`
+            }
+        
+        }
+    </script>
+</body>
+</html>
