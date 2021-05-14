@@ -1,0 +1,61 @@
+body {
+    background: rgb(70, 142, 236);    
+    font: normal 15pt Arial;
+    display: grid;
+}
+
+h1 {
+    font: Arial bolder;
+}
+
+header {
+    color: white;
+    text-align: center;
+}
+
+section {    
+    display: grid;
+    border-radius: 5px;
+    background: white;
+    padding: 15px;
+    width: 300px;
+    margin: auto;    
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
+}
+
+section div.dados {
+    display: grid;
+    grid-template-columns: 50px 250px ;
+    margin: 10px;
+    align-content: flex-start;    
+}
+
+section div input { 
+    border-radius: 5px;
+    display: grid;
+    justify-content: start;
+    align-items: flex-start;
+    width: 190px;
+    margin: auto;    
+}
+
+section div.btn input {
+    text-align: center;
+    width: auto;
+    margin-bottom: 20px;
+}
+
+
+section div.res {
+    display: grid;
+    ;
+    grid-template-columns: 1fr;
+    margin: 10px;
+    align-content: flex-start;    
+}
+
+footer {
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
